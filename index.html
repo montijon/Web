@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explicación sobre NAT, sus tipos, ventajas, desventajas y fuentes de información sobre la técnica de traducción de direcciones de red.">
+    <meta name="keywords" content="NAT, traducción de direcciones de red, tipos de NAT, ventajas de NAT, desventajas de NAT, redes de computadoras">
+    <meta name="robots" content="index, follow">
+    <title>Qué es NAT - Traducción de Direcciones de Red</title>
+    
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7f8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            width: 100%;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header img {
+            max-width: 200px;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        section {
+            width: 80%;
+            max-width: 900px;
+            padding: 30px;
+            background-color: white;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #4CAF50;
+        }
+
+        section p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 40px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            width: 100%;
+            padding: 15px 0;
+            text-align: center;
+            font-size: 1rem;
+            margin-top: 30px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Estilos Responsivos */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            section h2 {
+                font-size: 1.5rem;
+            }
+
+            section p {
+                font-size: 1rem;
+            }
+        }
+
+        /* Imágenes de portada */
+        .portada1 {
+            width: 21.58cm;
+            height: 12.13cm;
+            margin: 20px 0;
+        }
+
+        .portada2 {
+            width: 21.58cm;
+            height: 6.44cm;
+            margin: 20px 0;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <div style="display: flex; justify-content: flex-end; align-items: center; padding: 0 20px;">
+        <img src="conalep" alt="Logo CONALEP" style="max-width: 200px;">
+    </div>
+    <h1>Qué es NAT - Traducción de Direcciones de Red</h1>
+</header>
+
+    <!-- Primer imagen de portada con dimensiones específicas -->
+    <img src="Introducción" alt="Portada 1" class="portada1">
+
+    <!-- Segundo imagen de portada con dimensiones específicas -->
+    <img src="Network" alt="Portada 2" class="portada2">
+
+    <section>
+        <h2>¿Qué es NAT?</h2>
+        <p>
+            La Traducción de Direcciones de Red (Network Address Translation, por sus siglas en inglés) es una técnica utilizada en redes de computadoras para modificar las direcciones IP de los paquetes de datos que circulan entre redes privadas y públicas. Este proceso se realiza en un dispositivo de red, generalmente un router o un cortafuegos, con el objetivo principal de permitir que múltiples dispositivos en una red local (LAN) compartan una sola dirección IP pública para acceder a internet.
+        </p>
+    </section>
+
+    <section>
+        <h2>Tipos de NAT</h2>
+        <ul>
+            <li><strong>NAT Estático:</strong>
+                <ul>
+                    <li>En este tipo de NAT, una dirección IP privada se mapea a una dirección IP pública de forma fija.</li>
+                    <li>Se utiliza cuando se requiere que un dispositivo interno sea accesible desde fuera de la red de forma constante, como un servidor web o un servidor de correo electrónico.</li>
+                </ul>
+            </li>
+            <li><strong>NAT Dinámico:</strong>
+                <ul>
+                    <li>Este tipo asigna direcciones IP públicas a direcciones privadas de forma temporal, según la necesidad.</li>
+                    <li>A medida que un dispositivo dentro de la red realiza una solicitud, se le asigna una dirección IP pública disponible.</li>
+                </ul>
+            </li>
+            <li><strong>PAT (Port Address Translation) o NAT Sobrecargado:</strong>
+                <ul>
+                    <li>Es una forma de NAT dinámico en la que varias direcciones IP privadas pueden compartir una sola dirección IP pública, diferenciándose solo por el número de puerto.</li>
+                    <li>Es comúnmente utilizado en redes domésticas, donde varios dispositivos dentro de una casa usan la misma IP pública para conectarse a internet.</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Ventajas de NAT</h2>
+        <ul>
+            <li><strong>Conservación de direcciones IP:</strong>
+                <p>NAT permite que muchas computadoras dentro de una red local utilicen direcciones IP privadas, lo cual reduce la necesidad de direcciones IP públicas, que son limitadas y costosas.</p>
+            </li>
+            <li><strong>Seguridad adicional:</strong>
+                <p>Al ocultar las direcciones IP internas de los dispositivos, NAT proporciona una capa de seguridad, ya que los dispositivos internos no son accesibles directamente desde internet.</p>
+            </li>
+            <li><strong>Reducción de costos:</strong>
+                <p>Como NAT permite que múltiples dispositivos utilicen una sola dirección IP pública, se reduce la necesidad de adquirir múltiples direcciones IP, lo que puede ser costoso para las empresas y usuarios.</p>
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Desventajas de NAT</h2>
+        <ul>
+            <li><strong>Problemas con ciertos servicios de red:</strong>
+                <p>Algunos servicios, como juegos en línea, videoconferencias y ciertos protocolos de red, pueden tener dificultades para funcionar correctamente con NAT debido a la modificación de las direcciones IP y puertos.</p>
+            </li>
+            <li><strong>Dificultad para rastrear el origen de las conexiones:</strong>
+                <p>La traducción de direcciones IP puede dificultar la identificación de la fuente real de una conexión, lo que puede ser un problema en aplicaciones que requieren un seguimiento preciso.</p>
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Conclusión</h2>
+        <p>
+            NAT es una herramienta clave en la gestión de redes, especialmente en la conservación de direcciones IP y en el aumento de la seguridad de las redes internas. A pesar de sus limitaciones, sigue siendo fundamental en la mayoría de las redes locales e internet debido a su eficiencia en el manejo de las direcciones IP.
+        </p>
+    </section>
+
+    <!-- Nueva sección con las preguntas y respuestas -->
+    <section>
+        <h2>Preguntas Frecuentes sobre NAT</h2>
+        <ul>
+            <li><strong>¿Por qué NAT ayuda a conservar direcciones IP?</strong>
+                <p>NAT permite que varios dispositivos de una red local usen direcciones IP privadas, reduciendo la necesidad de direcciones IP públicas, que son limitadas y costosas.</p>
+            </li>
+            <li><strong>¿Qué tipo de NAT es ideal para redes domésticas?</strong>
+                <p>El <strong>PAT (NAT Sobrecargado)</strong> es el más adecuado, ya que permite que múltiples dispositivos compartan una sola IP pública, diferenciándose solo por el número de puerto.</p>
+            </li>
+            <li><strong>¿Qué problemas puede causar NAT con algunos servicios de red?</strong>
+                <p>Servicios como juegos en línea y videoconferencias pueden tener dificultades debido a la modificación de direcciones IP y puertos, lo que puede interferir con la conexión directa entre dispositivos.</p>
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Fuentes de Información</h2>
+        <ul>
+            <li><strong>RFC 3022 - "Traditional IP Network Address Translator (Traditional NAT)"</strong>
+                <p>Este documento de la IETF proporciona detalles técnicos sobre el funcionamiento y la especificación de NAT. <a href="https://tools.ietf.org/html/rfc3022" target="_blank">Enlace al RFC 3022</a></p>
+            </li>
+            <li><strong>Cisco - Documentación sobre NAT</strong>
+                <p>Cisco es uno de los principales proveedores de equipos de redes, y su documentación ofrece explicaciones detalladas sobre NAT y su implementación en redes. <a href="https://www.cisco.com/c/en/us/td/docs/iosxr/ncs5500/l3vpn/71x/b-71x-l3vpn/b-71x-l3vpn/b-71x-l3vpn_chapter_010.html" target="_blank">Enlace a la documentación de Cisco</a></p>
+            </li>
+            <li><strong>Libro: "Computer Networking: A Top-Down Approach" de James Kurose y Keith Ross</strong>
+                <p>Este libro es una de las fuentes más utilizadas en el estudio de redes de computadoras y cubre el tema de NAT de manera clara y detallada. Disponible en bibliotecas y plataformas de libros electrónicos.</p>
+            </li>
+            <li><strong>Libro: "Data and Computer Communications" de William Stallings</strong>
+                <p>Este libro de referencia en redes cubre a fondo el tema de NAT, explicando su implementación y ventajas. Disponible en librerías y bibliotecas académicas.</p>
+            </li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>Desarrollado por [Jesus Juarez] - Tema: NAT y redes de computadoras</p>
+    </footer>
+
+</body>
+</html>
